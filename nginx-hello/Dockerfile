@@ -1,8 +1,6 @@
 FROM nginx:mainline-alpine
-COPY . .
+FROM postgres
 RUN rm /etc/nginx/conf.d/*
-COPY . .
 ADD hello.conf /etc/nginx/conf.d/
-COPY . .
 ADD index.html /usr/share/nginx/html/
-COPY . .
+FROM mysql
